@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo day profile page</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <!-- navigate to other places on the website to do various db related things -->
+            <ul>
+                <li>
+                    <a href="/create_database">Create a Data Base!</a>
+                </li>
+                <li>
+                    <a href="/update_database">Update a Data Base!</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Look through the apis people have made here!</h1>
+
+
+
+
+    <section class="Hot Apis">
+        <!-- load and display fast growing Apis here -->
+    </section>
+
+
+    <section class="Featured Apis">
+        <!-- load and display heavily trafficked apis here -->
+    </section>
+
+    <section class="displaySiteActivity">
+        <!-- load pre existing data bases here, via relevant route in routes.js in app load more here than in profile preview -->
+
+
+        <ul class="siteActivityList">
+            <% for(var i=0; i<infoCluster.length; i++) {%>
+
+
+
+                <li class="message <%= infoCluster[i].priority %>">
+                    <span>
+                        <a href="/viewCluster/<%= infoCluster[i]._id %>">
+                            <%= infoCluster[i].Title %>
+                        </a>
+                    </span>
+
+                    <span>
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </span>
+
+                    <span>
+                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                    </span>
+
+
+
+                </li>
+
+                <% } %>
+        </ul>
+    </section>
+
+
+
+
+    <!--______________________________________________-->
+
+
+
+
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

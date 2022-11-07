@@ -1,0 +1,100 @@
+body{
+  /* padding-top:80px; */
+  word-wrap:break-word;
+}
+img{
+  height: 100px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.hidden{
+  display: none;
+}
+
+/* nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+nav li {
+  display: flex;
+  flex-direction: row;
+} */
+
+
+nav{
+
+}
+
+nav li {
+  /* display: inline; */
+
+}
+
+header{
+  background: gray;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
+}
+
+
+
+
+
+
+
+.drinks-data{
+/* display: inline-block; */
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.food-data{
+/* display: inline-block; */
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+
+.womensSection{
+  display: flex;
+  outline: 3px solid black;
+}
+
+.womensSection li{
+  /* display: flex; */
+  outline: 3px solid rebeccapurple;
+}
+
+.womensSection span{
+  /* display: flex; */
+  outline: 3px solid green;
+}

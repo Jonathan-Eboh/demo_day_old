@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo day profile page</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="profileStyle.css">
+</head>
+
+<!-- Notes**** Had to use and modify a couple templates for this preview of the demo day project bc time crunch, just wanted to be upfront about that
+will update the layout with better html and css going forward -->
+
+
+<body>
+
+    <section id="doc" class="yui-t7">
+        <header id="header">
+            <div id="hd">
+                <nav>
+                    <!-- navigate to other places on the website to do various db related things -->
+                    <ul>
+                        <li>
+                            <a href="/create_database">Create a Data Base!</a>
+                        </li>
+                        <li>
+                            <a href="/update_database">Update a Data Base!</a>
+                        </li>
+                        <li>
+                            <a href="/browse_apis">See Existing Apis</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="bd">
+            <div id="yui-main">
+                <div class="yui-b">
+                    <div class="yui-gc">
+                        <div class="yui-u first">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                            <div class="mt-3">
+                                <h4>John Doe</h4>
+                                <p class="text-secondary mb-1">Full Stack Developer</p>
+                                <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+                                <button class="btn btn-primary">Follow</button>
+                                <button class="btn btn-outline-primary">Message</button>
+                            </div>
+                        </div>
+                        <div class="yui-u">
+                            <div class="content"> User bounties Content Here</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="yui-b">
+                <div id="secondary">User state content here </div>
+                <section class="userStats">
+                    <!-- load and display the gamification aspect of the users profile here, stats, acheivements ect... -->
+                </section>
+                <section class="displayUserActivity">
+                    <!-- load links to the databases and things user has contrinbuted to -->
+                </section>
+                <section class="displaySiteActivity">
+                    <!-- load pre existing data bases here, via relevant route in routes.js in app  -->
+
+
+                    <ul class="siteActivityList">
+                        <% for(var i=0; i<infoCluster.length; i++) {%>
+
+
+
+                            <li class="message <%= infoCluster[i].priority %>">
+                                <span>
+                                    <a href="/viewCluster/<%= infoCluster[i]._id %>">
+                                        <%= infoCluster[i].Title %>
+                                    </a>
+                                </span>
+
+                                <span>
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </span>
+
+                                <span>
+                                    <i class="fa fa-check-square" aria-hidden="true"></i>
+                                </span>
+
+
+
+                            </li>
+
+                            <% } %>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div id="ft">
+            <div id="footer">Footer</div>
+        </div>
+    </section>
+
+
+
+
+    <!--______________________________________________-->
+
+
+
+
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
